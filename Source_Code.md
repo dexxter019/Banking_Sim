@@ -1,4 +1,4 @@
-# Banking_Sim
+//BANKING SIMULATOR--- MAZE BANK
 
     import java.util.*;
     class Account {
@@ -6,7 +6,7 @@
     int balance;
     int previousTransaction;
     String customerName;
-    String customerID;
+    String customerID; 
     //Class constructor
     Account(String cname, String cid) {
         customerName = cname;
@@ -40,7 +40,7 @@
         }
     }
 
-    //Function calculating interest of current funds after a number of years
+    //Function calculating interest of the current funds after a number of years
     void calculateInterest(int years) {
         double interestRate = .0185;
         double newBalance = (balance * interestRate * years) + balance;
@@ -48,10 +48,11 @@
         System.out.println("After " + years + " years, you balance will be: " + newBalance);
     }
 
-    //Function showing the main menu
+    //Function for Main menu
     void showMenu() {
         char option = '\0';
         Scanner scanner = new Scanner(System.in);
+        System.out.println("WELCOME TO MAZE BANK");
         System.out.println("Welcome, " + customerName + "!");
         System.out.println("Your ID is: " + customerID);
         System.out.println();
@@ -116,13 +117,12 @@
                     break;
             }
         } while (option != 'F');
-        System.out.println("Thank you for banking with us!");
+        System.out.println("Thank you for banking with Maze Bank!");
     }
-    }   
+    }
     public class Main {
     public static void main(String[] args) {
         Account sattam = new Account("Sattam Bhattacharyya", "12345");
         sattam.showMenu();
-
     }
     }
