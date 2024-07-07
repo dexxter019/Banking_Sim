@@ -122,8 +122,7 @@
     public class Main {
     public static void main(String[] args) {
         Account sattam = new Account("Sattam Bhattacharyya", "12345");
-        Account soham = new Account("Soham Bhattacharyya", "67890");
-        soham.showMenu();
+        sattam.showMenu();
 
     }
     }
